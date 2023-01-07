@@ -224,7 +224,6 @@ class HovEffect {
   }
 
   loadTexture(loader, url, index) {
-    // https://threejs.org/docs/#api/en/loaders/TextureLoader
     return new Promise((resolve, reject) => {
       if (!url) {
         resolve({ texture: null, index })
