@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-// import { gsap } from 'gsap';
 import { ScrollObserver } from "./_class.js";
 import vertex from '../shader/vertex-play-pc.glsl';
 import fragment from '../shader/fragment-play-pc.glsl';
