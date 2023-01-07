@@ -4,7 +4,6 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import fragment from "../shader/fragment.glsl";
 import vertex from "../shader/vertex.glsl";
-import particleTexture from "../images/particle.png";
 import { GetScrollNum } from "./_class.js";
 import { ScrollFunction } from "./_class.js";
 import { ScrollObserver } from "./_class.js";

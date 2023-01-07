@@ -3,6 +3,7 @@ import * as THREE from "three";
 import ripple from "../images/ripple.png";
 import mv from "../images/profile-mv.png";
 import me from "../images/me.png";
+import gsap from "gsap";
 
 let mediaQueryPCLarge, mediaQueryPC, mediaQueryTablet, mediaQueryMobile, mediaFlag; //メディアクエリ用変数
 const mvSec = document.getElementById('js-mv');

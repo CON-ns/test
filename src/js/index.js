@@ -1,11 +1,10 @@
-"use strict";
-
 import { GetScrollNum } from "./_class.js";
 import { ScrollFunction } from "./_class.js";
 import { ScrollObserver } from "./_class.js";
 import { SplitTextAnimation } from "./_class.js";
 import { SplitText } from "./_class.js";
 import { StickAnime } from "./_class.js";
+import gsap from "gsap";
 
 const winH = innerHeight;
 const winW = innerWidth;
