@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <meta name="description" content="" />
+
+    <!-- favicon/webclipicon -->
+    <!-- <link rel="icon" href="favicon.ico" /> -->
+    <!-- <link rel="icon" href="favicon.svg" type="image/">
+    <link rel="apple-touch-icon" href="webclip.png" /> -->
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website or article" />
+    <meta property="og:title" content="ページのタイトル" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- <meta property="fb:app_id" content="AppID"> -->
+    <meta name="twitter:card" content="summary_large_image or summary" />
+    <!-- <meta name="twitter:site" content="" /> -->
+    <meta name="twitter:description" content="ページの説明" />
+    <meta name="twitter:image:src" content="URL" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/splide-core.min.css">
+    <link rel="stylesheet" href="./scss/style.scss" />
+
+        <!-- フォントの読み込み -->
+    <!-- EloquentJFPro -->
+    <link rel="stylesheet" href="https://use.typekit.net/xsr1ckp.css">
+    <!-- Alber New -->
+    <link rel="stylesheet" href="https://use.typekit.net/rtt7kwm.css">
+    <!-- muli -->
+    <link rel="stylesheet" href="https://use.typekit.net/scf2bha.css">
+  </head>
+    <body>
+      <header class="l-header u-font__muli">
+        <h1 class="l-header__ttl js-stickOuterTop">
+          <a href="index.html" class="stickTarget">Yuuki Kon</a>
+          </h1>
+        <h2 class="l-header__sectionTtl" id="js-sectionTtl">00. Introduction</h2>
+      </header>
+      <section class="l-globalNav u-font__muli js-stickOuterProfile">
+        <a class="stickTarget" href="profile.html">Profile</a>
+      </section>
+  
+      <section class="p-main">
+        <p class="p-main__ttl js-parallax u-font__eloquent">
+          <span class="js-split">Hello</span>
+          <span class="js-split">This is my</span>
+          <span class="js-split">Portfolio.</span>
+        </p>
+      </section>
+  
+      <section class="p-about">
+        <h2 class="c-sectionTtl">01. About Me</h2>
+        <div class="p-about__wrapper js-about" id="js-about">
+          <div class="p-aboutImg" id="js-aboutImg">
+            <img src="images/about.jpeg" alt="" />
+          </div>
+          <div class="p-about__inner js-aboutSec u-font__muli js-fadeUpTarget">
+            <p class="p-about__txt js-fadeUpTarget">Nice to meet you.</p>
+            <p class="p-about__txt js-fadeUpTarget">My name is Yuuki Kon.</p>
+            <p class="p-about__txt js-fadeUpTarget">
+              I have a passion for web animation.
+            </p>
+          </div>
+        </div>
+        <div class="p-about__wrapper-2d js-about--2d">
+          <div class="p-about__inner--2d u-font__eloquent">
+            <p class="p-about__txt--l p-about__txt--l--1 js-aboutTxt-l targetLtR">I just do</p>
+            <p class="p-about__txt--l p-about__txt--l--2 js-aboutTxt-l targetRtL">Cording only.</p>
+            <p class="p-about__txt--l  js-aboutTxt-l targetLtR">But in future…</p>
+            <div class="p-about__link js-scaleInBtT js-stickOuter">
+              <a class="stickTarget" href="profile.html">Plese Know more!</a>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="p-works">
+        <h2 class="c-sectionTtl">02. My Works</h2>
+        <div class="p-works__wrapper js-worksSec">
+          <div class="p-works__ttlWrapper">
+            <div class="p-works__subTtlOuter js-subTtlOuter">
+              <p  class="p-works__subTtl js-slideSubTtl">cording</p>
+            </div>
+            <div class="p-works__ttlOuter js-ttlOuter">
+              <h3  class="p-works__ttl js-slideTtl">Dummy Image<span class="js-currentIndex2">01</span></h3>
+            </div>
+          </div>
+          <div class="splide p-works__slide works-mainSlide js-mainSlide" role="group" aria-label="制作実績">
+            <div class="splide__track p-works__slideTrack">
+              <ul class="splide__list p-works__mainSlideList">
+                <li class="splide__slide js-slide">
+                  <div class="p-works__slideItem js-slideItem">
+                    <img src="./images/works1.jpg" alt="">
+                  </div>
+                </li>
+                <li class="splide__slide js-slide">
+                  <div class="p-works__slideItem js-slideItem">
+                    <img src="./images/works2.jpg" alt="">
+                  </div>
+                </li>
+                <li class="splide__slide js-slide">
+                  <div class="p-works__slideItem js-slideItem">
+                    <img src="./images/works3.jpg" alt="">
+                  </div>
+                </li>
+                <li class="splide__slide js-slide">
+                  <div class="p-works__slideItem js-slideItem">
+                    <img src="./images/works4.jpg" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-works__number u-font__eloquent">
+            <p class="p-works__currentNum js-currentIndex">01</p>
+            <p class="p-works__totalNum js-totalNum">04</p>
+          </div>
+        </div>
+        <div class="p-works__message u-font__muli">
+          <p class="fadeUpTarget">Very sorry.At this time,</p>
+          <p><span class="fadeUpTarget">we do not have any production records</span><span class="fadeUpTarget">that we can disclose.</span>
+          </p>
+          <p><span class="fadeUpTarget">Instead, dummy images are displayed</span><span class="fadeUpTarget">as if they were created by me.</span></p>
+        </div>
+      </section>
+  
+      <div class="p-designTxt u-font__eloquent">
+        <p>
+          <span class="js-flowingToR">IWANTTOBE/</span><span class="js-flowingToR">IWANTTOBE/</span>
+        </p>
+        <p><span class="js-flowingToL">MORECREATIVE/</span><span class="js-flowingToL">MORECREATIVE/</span></p>
+      </div>
+  
+      <section class="p-message js-messageSec u-font__muli">
+        <h2 class="c-sectionTtl">03. Message</h2>
+        <div class="p-message__container js-fadeLtRTarget">
+          <p>I like sites with movement.</p>
+          <p>I admire the distortion, three-dimensional effect, and noisy expression in the simple design.</p>
+        </div>
+        <div class="p-message__container js-fadeLtRTarget">
+          <p>I would like to create a site where users can feel a sense of belonging.</p>
+          <p>However, I also believe that animation is just a means of expression.</p>
+        </div>
+        <div class="p-message__container js-fadeLtRTarget">
+          <p>I think it is necessary to implement effective movements that match the purpose of the website without interfering with the user’s operations.</p>
+        </div>
+      </section>
+
+      <section class="p-playgroundLink">
+        <a href="playground.html">
+          <canvas id="js-playgroundCanvas"></canvas>
+        </a>
+      </section>
+  
+      <section class="p-contact js-contactSec u-font__eloquent">
+        <h2 class="p-contact__ttl js-scaleInBtTY">Contact</h2>
+        <div class="js-stickOuter">
+          <a class="stickTarget" href="">jiny5019@gmail.com</a>
+        </div>
+        <div class="js-stickOuter">
+          <a class="stickTarget" href="">Twitter</a>
+        </div>
+        <h2 class="p-contact__ttl js-scaleInBtTY">Articles</h2>
+        <div class="js-stickOuter">
+          <a class="stickTarget" href="">Zenn</a>
+        </div>
+      </section>
+  
+      <footer class="l-footer u-font__muli">
+        <p><small>©️Yuuki Kon 2022</small></p>
+      </footer>
+  
+      <div class="c-grid" aria-hidden="true">
+        <div class="c-grid__line" aria-hidden="true"></div>
+        <div class="c-grid__line" aria-hidden=""></div>
+      </div>
+  
+  
+      <div class="cursorInner" id="js-cursorInner" aria-hidden="true">
+      </div>
+      <div class="cursorOuter u-font__eloquent" id="js-cursorOuter">
+          <p>Coming</p>
+          <p>Soon</p>
+      </div>
+  
+      <!-- <div class="noise"></div> -->
+
+      <div class="background--custom">
+        <canvas id="canvas-bg">
+      </div>
+
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js" integrity="sha512-Na4qwz8+Hb6JAVf8zFKtPri3XX/Z9/drSpFQuA9hUDnSYLFuu+GU0sfyDYw0SIUkvo/gSw//hCW/CjFJmIIc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js" integrity="sha512-rvYwlDPzd/lRzBvegx4gYYSywGV31gBq2dTL80HdKMzJ3EdfIbQXNbxbHSdfgf52L+tk9F2dRvUtvZYAvXNFPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/rollingDistortMaterial.js" integrity="sha512-MtFq3xofc3j5+N5lpmmSimhsp+rbptbJo6JdxxGlMG/HO3rTFbMBXBVUOi8+9Dw44BnzOqnUMNaxXcQYnRH1Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="js/splide.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+      <script src="js/script.js" type="module"></script>
+      <script src="js/index.js" type="module"></script>
+  </body>
+</html>

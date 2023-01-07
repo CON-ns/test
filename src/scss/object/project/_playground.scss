@@ -1,0 +1,121 @@
+body{
+  color:#333333;
+  line-height: 1;
+  background-color: transparent;
+
+  @media all and (max-width:768px){
+    position:fixed;
+    top:0;
+    width:100vw;
+  }
+}
+
+.p-playground{
+  font-family: "eloquent-jf-pro", serif;
+  margin-top:200px;
+  margin-bottom:100px;
+  @media all and (max-width:768px){
+    margin-top:50vh;
+    position:relative;
+    &:before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:calc(50vh / 3);
+      border:4px solid #333333;
+      border-radius:0.75rem;
+      pointer-events:none;
+      box-shadow: inset 6px 6px 12px #aba59b,
+            inset -6px -6px 12px #ffffff;
+    }
+    &:after{
+      content:'';
+      position:absolute;
+      top:calc(50vh / 3);
+      left:0;
+      width:100%;
+      height:calc(50vh / 3 * 2);
+      background-color:rgba(grey,0.5);
+      pointer-events:none;
+    }
+  }
+
+  .p-playground__list{
+    border-top: 1px solid #000;
+
+    @media all and (max-width:768px){
+      scroll-snap-type:y mandatory;
+      overflow-y:auto;
+      height:50vh;
+      border-radius:0.75rem;
+    }
+  }
+
+  .p-playground__item{
+
+    @media all and (max-width:768px){
+      scroll-snap-align: start;
+      height:calc(50vh / 3);
+      pointer-events:none;
+      transition:color 0.3s;
+      -webkit-text-stroke: 1px #222222;
+  text-stroke: 1px #222222;
+  color: transparent;
+     
+     &.is-view{
+       color:#333333;
+       pointer-events:auto;
+     }
+    }
+
+    &:nth-child(even){
+      text-align: right;
+    }
+  }
+  
+  .p-playground__link{
+    border-bottom: 1px solid #000;
+    display: block;
+    padding:30px 20px;
+
+    @media all and (max-width:768px){
+      border-radius:0.75rem;
+    }
+
+
+    img{
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      display: none;
+      pointer-events:none;
+    }
+    
+    .p-playground__ttl{
+      pointer-events:none;
+      font-size: 80px;
+    }
+    
+    .p-playground__detail{
+      pointer-events:none;
+      font-family: "muli", sans-serif;
+    }
+  }
+}
+
+.js-hovCanvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:2;
+  pointer-events:none;
+
+  @media all and (max-width:768px){
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+  }
+}

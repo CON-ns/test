@@ -1,0 +1,17 @@
+//メディアクエリ用
+
+$breakpoints:(
+  xs:"only screen and (max-width:320px)",
+  s:"only screen and (max-width:375px)",
+  m:"only screen and (max-width:767px)",
+  l:"only screen and (max-width:1023px)",
+  xl:"only screen and (max-width:1279px)",
+  2xl:"only screen and (max-width:1439px)",
+);
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints,$breakpoint)} {
+    @content;
+  }
+}
+

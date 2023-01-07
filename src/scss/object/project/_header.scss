@@ -1,0 +1,109 @@
+// --------------------------------------------
+// ヘッダー:z:100
+// ---------------------------------------------
+$headerW: 72px;
+.l-header {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: $headerW;
+  height: 100vh;
+  z-index: 300;
+  border-right: 1px solid rgba(178, 177, 177, 0.5);
+  mix-blend-mode: exclusion;
+  filter: invert(100%);
+  display:flex;
+  line-height: 1;
+  padding: 48px 20px;
+  flex-direction: column;
+  
+  @media all and (max-width:767px){
+    top:0;
+    height:$headerW;
+    width:100vw;
+    padding:0;
+    border-right:none;
+    border-bottom: 1px solid rgba(178, 177, 177, 0.5);
+  }
+
+  &__sectionTtl,
+  &__ttl {
+    transform-origin: left;
+    transform: rotateZ(-90deg);
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    line-height: 1;
+    padding:20px;
+    letter-spacing:0.15rem;
+    
+    @media all and (max-width:767px){
+      transform: rotateZ(0deg);
+      left:0;
+      letter-spacing:0.1rem;
+    }
+  }
+
+
+  &__ttl {
+    font-size: 20px;
+    bottom: 10px;
+    z-index:200;
+
+    @media all and (max-width:767px){
+      font-size: 16px;
+    }
+
+    a{
+      white-space: nowrap;
+    }
+
+    @media all and (max-width:767px){
+      bottom:50%;
+      transform:translateY(50%);
+    }
+  }
+  &__sectionTtl {
+    font-size: 20px;
+    bottom:150px;
+    
+    @media all and (max-width:767px){
+      bottom:50%;
+      transform:translateY(50%);
+      left:100px;
+      font-size: 16px;
+    }
+  }
+}
+
+// --------------------------------------------
+// ヘッダー:z:100
+// ---------------------------------------------
+
+.l-globalNav {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  right: 0;
+  color:#251D18;
+  height:72px;
+  width:120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-size: 20px;
+    padding:10px;
+    white-space: nowrap;
+    letter-spacing:0.15rem;
+    @media all and (max-width:767px){
+      letter-spacing:0.1rem;
+    }
+
+    @media all and (max-width:767px){
+      font-size: 16px;
+      padding:5px;
+    }
+  }
+}

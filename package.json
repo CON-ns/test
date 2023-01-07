@@ -1,0 +1,33 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build --emptyOutDir && prettier --write dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.12",
+    "css-declaration-sorter": "^6.3.1",
+    "postcss": "^8.4.18",
+    "postcss-normalize-charset": "^5.1.0",
+    "postcss-sort-media-queries": "^4.3.0",
+    "sass": "^1.55.0",
+    "vite": "^3.1.0",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 5%",
+    "iOS >= 9.0",
+    "Android >= 5",
+    "Firefox ESR"
+  ],
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "three": "^0.148.0"
+  }
+}

@@ -1,0 +1,35 @@
+html,body,*{
+  scroll-behavior: smooth;
+  cursor:none;
+}
+
+a{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+body{
+  color:#251D18;
+  // overflow: auto;
+  // -webkit-overflow-scrolling:touch;
+}
+
+//===================================================================
+//フォントの設定
+//===================================================================
+
+body,*,h1,h2,a,p,span{
+  font-kerning: normal;
+  font-feature-settings: "palt";
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <meta name="description" content="" />
+
+    <!-- favicon/webclipicon -->
+    <!-- <link rel="icon" href="favicon.ico" /> -->
+    <!-- <link rel="icon" href="favicon.svg" type="image/">
+    <link rel="apple-touch-icon" href="webclip.png" /> -->
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website or article" />
+    <meta property="og:title" content="ページのタイトル" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- <meta property="fb:app_id" content="AppID"> -->
+    <meta name="twitter:card" content="summary_large_image or summary" />
+    <!-- <meta name="twitter:site" content="" /> -->
+    <meta name="twitter:description" content="ページの説明" />
+    <meta name="twitter:image:src" content="URL" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./scss/style.scss" />
+
+    <!-- フォントの読み込み -->
+    <!-- EloquentJFPro -->
+    <link rel="stylesheet" href="https://use.typekit.net/xsr1ckp.css" />
+    <!-- Alber New -->
+    <link rel="stylesheet" href="https://use.typekit.net/rtt7kwm.css" />
+    <!-- muli -->
+    <link rel="stylesheet" href="https://use.typekit.net/scf2bha.css" />
+  </head>
+  <body>
+    <header class="l-header u-font__muli">
+      <h1 class="l-header__ttl js-stickOuterTop">
+        <a href="index.html" class="stickTarget">Yuuki Kon</a>
+      </h1>
+      <h2 class="l-header__sectionTtl" >00. Profile</h2>
+    </header>
+
+    <section class="p-profile-mv" id="js-mv">
+      <div class="p-profile-mv__inner u-font__eloquent">
+        <span class="p-profile-mv__p js-blotter" data-blotter-m>P</span>
+        <span  class="p-profile-mv__r js-blotter" data-blotter-s>R</span>
+        <span  class="p-profile-mv__o js-blotter" data-blotter-l>O</span>
+        <span  class="p-profile-mv__f js-blotter" data-blotter-l>F</span>
+        <span  class="p-profile-mv__i js-blotter" data-blotter-s>I</span>
+        <span  class="p-profile-mv__l js-blotter" data-blotter-l>L</span>
+        <span  class="p-profile-mv__e js-blotter" data-blotter-m>E</span>
+      </div>
+      <canvas id="webgl-canvas" class="webgl-canvas__body js-mvCanvas"></canvas>
+    </section>
+
+    <main class="p-profile-main">
+      <div class="p-profile-main__img">
+        <img class="js-disImg" src="images/about.jpeg" alt="">
+      </div>
+      <div class="p-profile-main__inner u-font__muli">
+        <p class="p-profile-main__txt js-fadeUpTarget">My name is Yuuki Kon.</p>
+        <p class="p-profile-main__txt js-fadeUpTarget">I was born in Aomori in 1995.
+          And now I am a web coder based in Nagasaki.
+          I work as a nurse and have a coding job on the side.
+          In March 2023, I plan to retire from my job as a nurse and make web production my main business.</p>
+        <p class="p-profile-main__txt js-fadeUpTarget">In my actual work, I have experience building landing pages and Wordpress sites.
+          As a self-study, I tried to create various web animations.
+          Some of them are grouped together in Playground.</p>
+        <p class="p-profile-main__txt js-fadeUpTarget">I like sites that have movement.And I would like to design them myself.
+          However, I am aware that I still lack implementation skills.
+          So now I am working on learning every day to enhance my implementation skills.</p>
+        <p class="p-profile-main__txt js-fadeUpTarget">I am currently learning 3D animation such as Three.js, webGL, and GLSL.
+          My interests include post-processing, asynchronous transitions, and SVG animation.
+          My greatest strength is my ability to be self-driven. And I am a self-motivated learner with a strong interest in new things.</p>
+      </div>
+    </main>
+
+    <section class="p-playgroundLink">
+      <a  href="playground.html">
+        <canvas id="js-playgroundCanvas"></canvas>
+      </a>
+    </section>
+
+    <section class="p-contact js-contactSec u-font__eloquent">
+      <h2 class="p-contact__ttl js-scaleInBtTY">Contact</h2>
+      <div class="js-stickOuter">
+        <a class="stickTarget" href="">jiny5019@gmail.com</a>
+      </div>
+      <div class="js-stickOuter">
+        <a class="stickTarget" href="">Twitter</a>
+      </div>
+      <h2 class="p-contact__ttl js-scaleInBtTY">Articles</h2>
+      <div class="js-stickOuter">
+        <a class="stickTarget" href="">Zenn</a>
+      </div>
+    </section>
+
+    <footer class="l-footer u-font__muli">
+      <p><small>©️Yuuki Kon 2022</small></p>
+    </footer>
+
+    <div class="webgl-canvas">
+      <canvas id="img-canvas" class="webgl-canvas__body"></canvas>
+    </div>
+
+    <div class="c-grid" aria-hidden="true">
+      <div class="c-grid__line" aria-hidden="true"></div>
+      <div class="c-grid__line" aria-hidden=""></div>
+    </div>
+    <div class="cursorInner" id="js-cursorInner" aria-hidden="true">
+      <img src="images/cursorBlack.svg" alt="">
+    </div>
+    <div class="noise"></div>
+
+    <div class="background--custom">
+      <canvas id="canvas-bg">
+    </div>
+
+
+    <script id="v-shader" type="x-shader/x-vertex">
+      varying vec2 vUv;
+      void main(){
+        vUv = uv;
+        vec3 pos = position;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+      }
+      </script>
+
+
+      <script id="f-shader" type="x-shader/x-fragment">
+      varying vec2 vUv;
+      uniform sampler2D uTexture;
+      uniform sampler2D uDisplacement;
+      float PI = 3.141592653989793238;
+      
+      void main(){
+        vec4 displacement = texture2D(uDisplacement,vUv);
+        float theta = displacement.r*2.*PI;
+        vec2 dir = vec2(sin(theta),cos(theta));//歪み具合を調整する
+
+        vec2 uv = vUv + dir*displacement.r*0.1;
+        
+        
+        
+        vec4 color = texture2D(uTexture,uv);
+        gl_FragColor = vec4(color);
+      }
+      </script>
+
+      <script id="v-shader-img" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        uniform float uTime;
+  
+        float PI = 3.1415926535897932384626433832795;
+  
+        void main(){
+          vUv = uv;
+          vec3 pos = position;
+  
+          // 横方向
+          float amp = 0.03; // 振幅（の役割） 大きくすると波が大きくなる
+          float freq = 0.01 * uTime; // 振動数（の役割） 大きくすると波が細かくなる
+  
+          // 縦方向
+          float tension = -0.001 * uTime; // 上下の張り具合
+  
+          pos.x = pos.x + sin(pos.y * PI  * freq) * amp;
+          pos.y = pos.y + (cos(pos.x * PI) * tension);
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+        }
+      </script>
+
+      <script id="f-shader-img" type="x-shader/x-fragment">
+        varying vec2 vUv;
+        uniform sampler2D uTexture;
+        uniform float uImageAspect;
+        uniform float uPlaneAspect;
+        uniform float uTime;
+  
+        void main(){
+          // 画像のアスペクトとプレーンのアスペクトを比較し、短い方に合わせる
+          vec2 ratio = vec2(
+            min(uPlaneAspect / uImageAspect, 1.0),
+            min((1.0 / uPlaneAspect) / (1.0 / uImageAspect), 1.0)
+          );
+  
+          // 計算結果を用いて補正後のuv値を生成
+          vec2 fixedUv = vec2(
+            (vUv.x - 0.5) * ratio.x + 0.5,
+            (vUv.y - 0.5) * ratio.y + 0.5
+          );
+  
+          //texture2D関数画像とuv座標を指定して座標での色を取り出す
+          //rgbシフトありの場合以下を適応(uTimeに乗算する数値でシフト幅を調整)
+          vec2 offset = vec2(0.0,uTime * 0.0003);
+          float r = texture2D(uTexture,fixedUv + offset).r;
+          float g = texture2D(uTexture,fixedUv + offset * 0.5).g;
+          float b = texture2D(uTexture,fixedUv).b;
+          vec3 texture = vec3(r,g,b);
+          gl_FragColor = vec4(texture, 1.0);
+        }
+      </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js" integrity="sha512-Na4qwz8+Hb6JAVf8zFKtPri3XX/Z9/drSpFQuA9hUDnSYLFuu+GU0sfyDYw0SIUkvo/gSw//hCW/CjFJmIIc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js" integrity="sha512-rvYwlDPzd/lRzBvegx4gYYSywGV31gBq2dTL80HdKMzJ3EdfIbQXNbxbHSdfgf52L+tk9F2dRvUtvZYAvXNFPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/rollingDistortMaterial.js" integrity="sha512-MtFq3xofc3j5+N5lpmmSimhsp+rbptbJo6JdxxGlMG/HO3rTFbMBXBVUOi8+9Dw44BnzOqnUMNaxXcQYnRH1Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+    <script src="js/script.js" type="module"></script>
+    <script src="js/profile.js" type="module"></script>
+  </body>
+</html>

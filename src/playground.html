@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <meta name="description" content="" />
+
+    <!-- favicon/webclipicon -->
+    <!-- <link rel="icon" href="favicon.ico" /> -->
+    <!-- <link rel="icon" href="favicon.svg" type="image/">
+    <link rel="apple-touch-icon" href="webclip.png" /> -->
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website or article" />
+    <meta property="og:title" content="ページのタイトル" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- <meta property="fb:app_id" content="AppID"> -->
+    <meta name="twitter:card" content="summary_large_image or summary" />
+    <!-- <meta name="twitter:site" content="" /> -->
+    <meta name="twitter:description" content="ページの説明" />
+    <meta name="twitter:image:src" content="URL" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./scss/style.scss" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/xsr1ckp.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/scf2bha.css" />
+  </head>
+  <body>
+    <section class="p-playground" id="js-playground">
+      <ul class="p-playground__list js-itemsWrapper">
+        <li class="p-playground__item js-hovList is-view">
+          <a class="p-playground__link js-hovLink" href="https://shader-gallery-80kc5l3mp-con-ns.vercel.app/">
+            <img class="js-hovImg" src="images/link-1.jpg" alt="">
+            <h2 class="p-playground__ttl">Shader Distortion Gallery</h2>
+            <div class="p-playground__detail">Three.js/shader</div>
+            <p class="p-playground__detail">referred to:https://zenn.dev/bokoko33/articles/bd6744879af0d5(これあとからデプロイ先に書く)
+            </p>
+            <p></p>
+          </a>
+        </li>
+        <li class="p-playground__item js-hovList">
+          <a class="p-playground__link js-hovLink" href="https://threejs-crystal-wolf.vercel.app/">
+            <img class="js-hovImg" src="images/link-2.jpg" alt="">
+            <h2 class="p-playground__ttl">Crystal Diamond</h2>
+            <p class="p-playground__detail">Three.js/mapping</p>
+            <p></p>
+          </a>
+        </li>
+        <li class="p-playground__item js-hovList">
+          <a class="p-playground__link js-hovLink" href="https://ripple-shader.vercel.app/">
+            <img class="js-hovImg" src="images/link-4.jpg" alt="">
+            <h2 class="p-playground__ttl">Ripple</h2>
+            <p class="p-playground__detail">Three.js/shader</p>
+            <p></p>
+          </a>
+        </li>
+        <li class="p-playground__item js-hovList">
+          <a class="p-playground__link js-hovLink" href="https://colorful-mouse-stalker.vercel.app/">
+            <img class="js-hovImg" src="images/link-1.jpg" alt="">
+            <h2 class="p-playground__ttl">Colorful-Mouse-Stalker</h2>
+            <p class="p-playground__detail">Canvas2D</p>
+            <p></p>
+          </a>
+        </li>
+        <li class="p-playground__item js-hovList">
+          <a class="p-playground__link js-hovLink" href="https://hover-glitch.vercel.app/">
+            <img class="js-hovImg" src="images/link-2.jpg" alt="">
+            <h2 class="p-playground__ttl">Hover-Glitch-Effect</h2>
+            <p class="p-playground__detail">CSS</p>
+            <p></p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="background--custom">
+      <canvas id="canvas-bg">
+    </div>
+    <div class="cursorInner" id="js-cursorInner" aria-hidden="true">
+    </div>
+    <div class="cursorOuter u-font__eloquent" id="js-cursorOuter">
+        <p>Coming</p>
+        <p>Soon</p>
+    </div>
+
+    <script src="./js/script.js" type="module"></script>
+    <script src="./js/playground.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+
+  </body>
+</html>

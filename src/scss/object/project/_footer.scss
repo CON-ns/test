@@ -1,0 +1,56 @@
+// --------------------------------------------
+// contact
+// ---------------------------------------------
+$headerW: 72px;
+.p-contact{
+  margin-left:calc($headerW + ((100vw - $headerW) * 0.2));
+  margin-bottom: 250px;
+  position: relative;
+  z-index: 200;
+  @media all and (max-width:1023px){
+    margin-left:calc($headerW + ((100vw - $headerW) * 0.25));
+  }
+  @media all and (max-width:767px){
+    margin-left:20px;
+  }
+  .p-contact__ttl{
+    font-size:clamp(67px,12.7vw,250px);
+    letter-spacing:1.2rem;
+    line-height: 0.65;
+    margin-top: 150px;
+    white-space: nowrap;
+    @media all and (max-width:767px){
+      letter-spacing:0.6rem;
+    }
+  }
+
+  a{
+    display:block;
+    width: fit-content;
+    font-size: clamp(20px,1.8vw,35px);
+    letter-spacing:0.1rem;
+    white-space: nowrap;
+  }
+}
+
+// --------------------------------------------
+// footer
+// ---------------------------------------------
+.l-footer {
+  padding-bottom: 20px;
+  position:relative;
+  letter-spacing:0.1rem;
+  z-index: 112;
+  font-weight: bold;
+  p {
+    margin-left: calc($headerW + ((100vw - $headerW) * 0.8));
+    font-size: 14px;
+    
+    @media all and (max-width:1023px){
+      margin-left: calc($headerW + ((100vw - $headerW) * 0.75));
+    }
+    @media all and (max-width:767px){
+      margin-left: 65vw;
+    }
+  }
+}
